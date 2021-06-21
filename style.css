@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap')
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+html{
+	font-size: 10px;
+	font-family: 'Roberto Condensed', halvetica, san-serif;
+}
+
+body{
+	margin:0;
+	background-color: #999;
+}
+
+.navbar{
+	width: 100%;
+	height: 80px;
+	background-color: #FFF;
+	font-weight: 100;
+	line-height: 6rem;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+.navbar-container{
+	width: 70%;
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+.navbar ul{
+	float: right;
+	list-style: none;
+	margin:0;
+}
+
+.navbar ul li{
+	display: inline-block;
+	padding-top: 10px; 
+	padding-bottom: 10px;
+}
+
+.navbar ul li a{
+	text-decoration: none;
+	color: rgb(154,174,184);
+	font-size: 16px;
+	padding: 0 1.5rem;
+	cursor: pointer;
+}
+
+.navbar ul li:hover{
+	background-color: #e05465;
+	color: #fff;
+}
+
+.nav-text{
+	float: left;
+	margin-top: 10px;
+	
+}
+
+.nav-text a{
+	
+	color: rgb(81,94,101);
+	text-shadow:rgba(10, 189, 240, 0.298039) 3px 3px 0px, rgba(254, 1, 1, 0.298039) -3px -3px 0px;
+	font-size: 30px;
+	text-decoration: none;
+}
+
+.fixed-bottom{
+	position: fixed;
+	bottom: 0;
+	z-index: 20;
+}
+
+.fixed-top{
+	position: fixed;
+	top: 0;
+	z-index: 20;
+}
