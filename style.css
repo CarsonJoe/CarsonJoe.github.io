@@ -13,24 +13,32 @@ html{
 
 body{
 	margin:0;
-	background-color: #999;
+	background-color: #FFF;
+}
+
+.header{
+	width: calc(100%-0px);
 }
 
 .navbar{
+	background: transparent url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/shiny2button_bg.png) center bottom repeat-x;
+	background-color: rgba(250,250,250,.8);
 	width: 100%;
 	height: 80px;
-	background-color: #FFF;
 	font-weight: 100;
 	line-height: 6rem;
 	font-family: Arial,Helvetica,sans-serif;
 	position: fixed;
 	bottom: 0;
+	top: 0;
+	margin: 0 auto;
 }
 
 .navbar-container{
 	width: 70%;
 	max-width: 120rem;
 	margin: 0 auto;
+	min-width: 600px;
 }
 
 .navbar ul{
@@ -42,7 +50,7 @@ body{
 .navbar ul li{
 	display: inline-block;
 	padding-top: 10px; 
-	padding-bottom: 10px;
+	padding-bottom: 8px;
 }
 
 .navbar ul li a{
@@ -54,7 +62,7 @@ body{
 }
 
 .navbar ul li:hover{
-	background-color: #e05465;
+	background-color: rgba(10, 189, 240, 0.298039);
 	color: #fff;
 }
 
@@ -87,4 +95,48 @@ body{
 .about{
 	height: 1200px;
 	background-color: #fff;
+	text-align: Center;
+}
+
+.about h1{
+	padding-top: 70px;
+	padding-bottom: 70px;
+	font-size: 70px;
+	color: #FFF;
+	text-shadow:rgba(10, 189, 240, 0.298039) 3px 3px 0px, rgba(254, 1, 1, 0.298039) -3px -3px 0px;
+	min-width: 400px;
+}
+
+.who{
+	float: left;
+	background-color: rgba(10, 189, 240, 0.298039);
+	width:45%;
+	height:800px;
+	margin-right: 5%;
+	min-width: 400px;
+	margin: auto;
+}
+
+.what{
+	float: right;
+	background-color: rgba(254, 1, 1, 0.298039);
+	width:45%;
+	min-width: 400px;
+	height:800px;
+	margin-left: 5%;
+	margin: auto;
+}
+
+h2{
+	font-size: 40px;
+	color: rgb(81,94,101);
+}
+
+p{
+	font-size: 18px;
+}
+
+.container{
+	width: 70%;
+	margin: 0 auto;
 }
