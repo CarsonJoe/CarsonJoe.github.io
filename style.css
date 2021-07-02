@@ -9,6 +9,7 @@
 html{
 	font-size: 10px;
 	font-family: 'Roberto Condensed', halvetica, san-serif;
+	scroll-behavior: smooth;
 }
 
 body{
@@ -47,17 +48,17 @@ body{
 	margin:0;
 }
 
-.navbar ul li{
+.navbar ul a li{
 	display: inline-block;
-	padding-top: 10px; 
+	padding: 0 1.5rem;
+	padding-top: 10px;
 	padding-bottom: 8px;
 }
 
-.navbar ul li a{
+.navbar ul a{
 	text-decoration: none;
 	color: rgb(154,174,184);
 	font-size: 16px;
-	padding: 0 1.5rem;
 	cursor: pointer;
 }
 
@@ -69,11 +70,11 @@ body{
 .nav-text{
 	float: left;
 	margin-top: 10px;
-	
+
 }
 
 .nav-text a{
-	
+
 	color: rgb(81,94,101);
 	text-shadow:rgba(10, 189, 240, 0.298039) 3px 3px 0px, rgba(254, 1, 1, 0.298039) -3px -3px 0px;
 	font-size: 30px;
@@ -92,13 +93,17 @@ body{
 	z-index: 20;
 }
 
+.unfixed{
+	position: static;
+}
+
 .about{
-	height: 1200px;
-	background-color: #fff;
+  padding-bottom: 200px;
+	background-color: #FFF;
 	text-align: Center;
 }
 
-.about h1{
+h1{
 	padding-top: 70px;
 	padding-bottom: 70px;
 	font-size: 70px;
@@ -108,23 +113,79 @@ body{
 }
 
 .who{
-	float: left;
-	background-color: rgba(10, 189, 240, 0.298039);
+	background-color: rgba(44,181,232,.53);
 	width:45%;
-	height:800px;
-	margin-right: 5%;
 	min-width: 400px;
 	margin: auto;
+  padding: 5%;
+  margin-bottom: 60px;
+  border-radius: 20px;
+}
+
+.who h2{
+	margin-top:0;
 }
 
 .what{
-	float: right;
-	background-color: rgba(254, 1, 1, 0.298039);
+	background-color: rgba(44,181,232,.53);
 	width:45%;
 	min-width: 400px;
-	height:800px;
-	margin-left: 5%;
 	margin: auto;
+  padding: 5%;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.what h2{
+	margin-top:0;
+}
+
+.gallery{
+	background: linear-gradient(55deg, #d37aa8 0%, #81e8ff 51%, #5587e1 85%);
+	text-align: center;
+}
+
+.gallery h1{
+	margin:0;
+}
+
+.gallery-container{
+	background-color: rgba(240,240,240,.3);
+	width:70%;
+	margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 20px;
+}
+
+.gallery-container img{
+  width:30%;
+  min-width: 250px;
+  max-width: 400px;
+  padding:10px;
+
+}
+
+.gallery-container img:hover{
+
+}
+
+.gallery-pad{
+  height: 50px;
+}
+
+footer{
+
+}
+
+.footer-container{
+  width: 70%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+footer p{
+  color: rgb(154,174,184);
 }
 
 h2{
@@ -134,9 +195,11 @@ h2{
 
 p{
 	font-size: 18px;
+	color: rgb(81,94,101);
 }
 
 .container{
 	width: 70%;
 	margin: 0 auto;
 }
+
