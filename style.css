@@ -38,7 +38,7 @@ body{
 .navbar-container{
 	width: 70%;
 	margin: 0 auto;
-	min-width: 400px;
+	min-width: 350px;
 }
 
 .navbar ul{
@@ -80,10 +80,6 @@ body{
 	text-decoration: none;
 }
 
-.unfixed{
-	position: static;
-}
-
 .about{
   padding-bottom: 200px;
 	background-color: #FFF;
@@ -96,7 +92,7 @@ h1{
 	font-size: 70px;
 	color: #FFF;
 	text-shadow:rgba(10, 189, 240, 0.298039) 3px 3px 0px, rgba(254, 1, 1, 0.298039) -3px -3px 0px;
-	min-width: 400px;
+	min-width: 350px;
 }
 
 .who{
@@ -139,7 +135,7 @@ h1{
 .gallery-container{
 	background-color: rgba(240,240,240,.3);
 	width:70%;
-	min-width: 400px;
+	min-width: 350px;
 	margin: 0 auto;
 	padding:15px;
   border-radius: 20px;
@@ -163,24 +159,23 @@ h1{
   height: 50px;
 }
 
-footer{
-
+footer img{
+	margin-top: 5px;
 }
 
 .footer-container{
-  width: 400px;
-  padding: 20px;
+  width: 350px;
   margin: 0 auto;
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 footer p{
   color: rgb(154,174,184);
   font-size: 14.2px;
-}
-
-.instagram{
-	float: right;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 h2{
@@ -195,7 +190,7 @@ p{
 
 .container{
 	width: 45%;
-	min-width:400px;
+	min-width:350px;
 	margin: 0 auto;
 }
 
@@ -210,6 +205,27 @@ p{
     .gallery-container img{
 	 width:96%;
   }
+	h1{
+		font-size:60px;
+	}
+	.what{
+		border-radius: 0px;
+	}
+	.who{
+		border-radius: 0px;
+	}
+	.container{
+		width:100%;
+	}
+	.gallery-container{
+		border-radius: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.gallery-container img{
+		
+		padding-left: 0px;
+		padding-right: 0px;
+	}
   }
-}
 
