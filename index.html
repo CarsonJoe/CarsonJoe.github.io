@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 <link href="lightbox.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
@@ -53,7 +54,7 @@ body {font-family: "Lato", sans-serif}
 
 	<div class="about" id="about">
 		<div class="container">
-			<h1>WELCOME</h1>
+			<h1 data-aos="fade-down">WELCOME</h1>
 			<div class="who">
 				<h2>Who Are We?</h2>
 				<p>We are two siblings, Arianna and Carson Gragg, and are attending colleges across the country from eachother. We love making beautiful art through Chromatography. As Graggs, we have grown up around our family company - Golden Gate Palms and Exotics. Our mission is to show the world the hidden beauty of exotic flora - by capturing and reimagining the magical power of photosynthesis.</p><br>
@@ -66,21 +67,21 @@ body {font-family: "Lato", sans-serif}
 	</div>
 
 	<div class="gallery" id="gallery">
-		<h1>GALLERY</h1>
+		<h1 data-aos="fade-down">GALLERY</h1>
 		<div class="gallery-container">
-		  <a href="MainPhotos/1.JPG" data-lightbox="gal"><img src=MainPhotos/1s.jpg></a>
-		  <a href="MainPhotos/2.JPG" data-lightbox="gal"><img src=MainPhotos/2s.jpg></a>
-		  <a href="MainPhotos/3.JPG" data-lightbox="gal"><img src=MainPhotos/3s.jpg></a>
-		  <a href="MainPhotos/4.JPG" data-lightbox="gal"><img src=MainPhotos/4s.jpg></a>
-		  <a href="MainPhotos/5.JPG" data-lightbox="gal"><img src=MainPhotos/5s.jpg></a>
-		  <a href="MainPhotos/6.JPG" data-lightbox="gal"><img src=MainPhotos/8s.jpg></a>
-		  <a href="MainPhotos/7.JPG" data-lightbox="gal"><img src=MainPhotos/7s.jpg></a>
-		  <a href="MainPhotos/8.JPG" data-lightbox="gal"><img src=MainPhotos/8s.jpg></a>
-		  <a href="MainPhotos/9.JPG" data-lightbox="gal"><img src=MainPhotos/9s.jpg></a>
-		  <a href="MainPhotos/10.JPG" data-lightbox="gal"><img src=MainPhotos/10s.jpg></a>
-		  <a href="MainPhotos/11.JPG" data-lightbox="gal"><img src=MainPhotos/11s.jpg></a>
-		  <a href="MainPhotos/12.JPG" data-lightbox="gal"><img src=MainPhotos/12s.jpg></a>
-		  <a href="MainPhotos/13.JPG" data-lightbox="gal"><img src=MainPhotos/13s.jpg></a>
+		  <a href="MainPhotos/1.JPG" data-lightbox="gal"><img src=MainPhotos/1s.JPG></a>
+		  <a href="MainPhotos/2.JPG" data-lightbox="gal"><img src=MainPhotos/2s.JPG></a>
+		  <a href="MainPhotos/3.JPG" data-lightbox="gal"><img src=MainPhotos/3s.JPG></a>
+		  <a href="MainPhotos/4.JPG" data-lightbox="gal"><img src=MainPhotos/4s.JPG></a>
+		  <a href="MainPhotos/5.JPG" data-lightbox="gal"><img src=MainPhotos/5s.JPG></a>
+		  <a href="MainPhotos/6.JPG" data-lightbox="gal"><img src=MainPhotos/8s.JPG></a>
+		  <a href="MainPhotos/7.JPG" data-lightbox="gal"><img src=MainPhotos/7s.JPG></a>
+		  <a href="MainPhotos/8.JPG" data-lightbox="gal"><img src=MainPhotos/8s.JPG></a>
+		  <a href="MainPhotos/9.JPG" data-lightbox="gal"><img src=MainPhotos/9s.JPG></a>
+		  <a href="MainPhotos/10.JPG" data-lightbox="gal"><img src=MainPhotos/10s.JPG></a>
+		  <a href="MainPhotos/11.JPG" data-lightbox="gal"><img src=MainPhotos/11s.JPG></a>
+		  <a href="MainPhotos/12.JPG" data-lightbox="gal"><img src=MainPhotos/12s.JPG></a>
+		  <a href="MainPhotos/13.JPG" data-lightbox="gal"><img src=MainPhotos/13s.JPG></a>
 		</div>
     <div class="gallery-pad">
     </div>
@@ -94,7 +95,7 @@ body {font-family: "Lato", sans-serif}
   <div class="footer-container">
     <div class="nav-text">
       <a href="#top" target="_self">CHROMATOGRAPHY</a>
-	  <a href="www.instagram.com"><img src=images/ig.png></a>
+	  <a href="https://www.instagram.com/exoticflora_gallery/"><img src=images/ig.png></a>
 	  <div>
 	  </div>
       <p>Website designed and coded by Carson Gragg</p>
@@ -132,13 +133,16 @@ function carousel() {
 
 <script src="scripts.js" type="text/javascript"></script>
 <script src="lightbox-plus-jquery.min.js" type="text/javascript"></script>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
     lightbox.option({
       'disableScrolling': true;
       'wrapAround': true
     })
+</script>
+<script>
+  AOS.init();
 </script>
 </body>
 </html>
