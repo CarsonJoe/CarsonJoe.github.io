@@ -30,16 +30,15 @@ body{
 	line-height: 6rem;
 	font-family: Arial,Helvetica,sans-serif;
 	position: fixed;
-	bottom: 0;
 	top: 0;
 	margin: 0 auto;
+	z-index: 3;
 }
 
 .navbar-container{
 	width: 70%;
-	max-width: 120rem;
 	margin: 0 auto;
-	min-width: 600px;
+	min-width: 400px;
 }
 
 .navbar ul{
@@ -81,18 +80,6 @@ body{
 	text-decoration: none;
 }
 
-.fixed-bottom{
-	position: fixed;
-	bottom: 0;
-	z-index: 20;
-}
-
-.fixed-top{
-	position: fixed;
-	top: 0;
-	z-index: 20;
-}
-
 .unfixed{
 	position: static;
 }
@@ -114,12 +101,12 @@ h1{
 
 .who{
 	background-color: rgba(44,181,232,.53);
-	width:45%;
-	min-width: 400px;
-	margin: auto;
+	width:90%;
   padding: 5%;
+  margin: 0 auto;
   margin-bottom: 60px;
   border-radius: 20px;
+	max-width: 500px;
 }
 
 .who h2{
@@ -128,10 +115,10 @@ h1{
 
 .what{
 	background-color: rgba(44,181,232,.53);
-	width:45%;
-	min-width: 400px;
-	margin: auto;
-  padding: 5%;
+	width:90%;
+	max-width: 500px;
+	padding: 5%;
+  margin: 0 auto;
   margin-bottom: 10px;
   border-radius: 20px;
 }
@@ -152,22 +139,24 @@ h1{
 .gallery-container{
 	background-color: rgba(240,240,240,.3);
 	width:70%;
+	min-width: 400px;
 	margin: 0 auto;
-  padding-top: 15px;
-  padding-bottom: 15px;
+	padding:15px;
   border-radius: 20px;
 }
 
 .gallery-container img{
-  width:30%;
-  min-width: 250px;
+  min-width: 200px;
   max-width: 400px;
+	width:30.5%;
   padding:10px;
-
+	transition: .7s;
 }
 
 .gallery-container img:hover{
-
+	transform: scale(1.03);
+	filter:hue-rotate(15deg);
+	filter:drop-shadow(0px 0px 10px gray);
 }
 
 .gallery-pad{
@@ -179,13 +168,19 @@ footer{
 }
 
 .footer-container{
-  width: 70%;
+  width: 400px;
   padding: 20px;
   margin: 0 auto;
+  text-align: center;
 }
 
 footer p{
   color: rgb(154,174,184);
+  font-size: 14.2px;
+}
+
+.instagram{
+	float: right;
 }
 
 h2{
@@ -194,12 +189,27 @@ h2{
 }
 
 p{
-	font-size: 18px;
+	font-size: 20px;
 	color: rgb(81,94,101);
 }
 
 .container{
-	width: 70%;
+	width: 45%;
+	min-width:400px;
 	margin: 0 auto;
+}
+
+@media only screen and (max-width:1118px) {
+  /* For tablets: */
+  .gallery-container img{
+	 width:45%;
+  }
+}
+@media only screen and (max-width:650px) {
+  /* For mobile phones: */
+    .gallery-container img{
+	 width:96%;
+  }
+  }
 }
 
