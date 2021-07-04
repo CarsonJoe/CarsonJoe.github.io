@@ -22,17 +22,17 @@ body {font-family: "Lato", sans-serif}
 
   <!-- Automatic Slideshow Images -->
   <div class="mySlides display-container center">
-    <img src="MainPhotos/2.JPG" style="width:100%">
+    <div class="slide-container"><img class="slides" src="MainPhotos/2.JPG"></div>
     <div class="display-bottommiddle container text-white padding-32 hide-small">
     </div>
   </div>
   <div class="mySlides display-container center">
-    <img src="MainPhotos/3.JPG" style="width:100%">
+    <div class="slide-container"><img class="slides" src="MainPhotos/3.JPG"></div>
     <div class="display-bottommiddle container text-white padding-32 hide-small">
     </div>
   </div>
   <div class="mySlides display-container center">
-    <img src="MainPhotos/13.JPG" style="width:100%">
+    <div class="slide-container"><img class="slides" src="MainPhotos/13.JPG"></div>
     <div class="display-bottommiddle container text-white padding-32 hide-small">
     </div>
   </div>
@@ -43,11 +43,21 @@ body {font-family: "Lato", sans-serif}
 			<div class="nav-text">
 				<a href="#top" target="_self">CHROMATOGRAPHY</a>
 			</div>
-			<ul>
-        <a href="#about"><li>About</li></a>
-        <a href="#gallery"><li>Gallery</li></a>
-        <a href="#prints"><li>Prints</li></a>
-			</ul>
+			<div class="norm-nav">
+				<ul>
+					<a href="#about"><li>About</li></a>
+					<a href="#gallery"><li>Gallery</li></a>
+					<a href="#prints"><li>Prints</li></a>
+				</ul>
+			</div>
+			<div class="mobile-nav">
+				<button onclick="myFunction()" class="dropbtn"><img src="images/menu.png"></button>
+				<ul>
+					<a href="#about"><li>About</li></a>
+					<a href="#gallery"><li>Gallery</li></a>
+					<a href="#prints"><li>Prints</li></a>
+				</ul>
+			</div>
 		</nav>
 	</nav>
 </header>
@@ -57,7 +67,7 @@ body {font-family: "Lato", sans-serif}
 			<h1 data-aos="fade-down">WELCOME</h1>
 			<div class="who">
 				<h2>Who Are We?</h2>
-				<p>We are two siblings, Arianna and Carson Gragg, and are attending colleges across the country from eachother. We love making beautiful art through Chromatography. As Graggs, we have grown up around our family company - Golden Gate Palms and Exotics. Our mission is to show the world the hidden beauty of exotic flora - by capturing and reimagining the magical power of photosynthesis.</p><br>
+				<p>We are two siblings, Arianna and Carson Gragg, who attend colleges across the country from eachother. We love making beautiful art through Chromatography. As Graggs, we have grown up around our family company - Golden Gate Palms and Exotics. Our mission is to show the world the hidden beauty of exotic flora - by capturing and reimagining the magical power of photosynthesis.</p><br>
 			</div>
 			<div class="what">
 				<h2>What Do We Do?</h2>
@@ -69,19 +79,19 @@ body {font-family: "Lato", sans-serif}
 	<div class="gallery" id="gallery">
 		<h1 data-aos="fade-down">GALLERY</h1>
 		<div class="gallery-container">
-		  <a href="MainPhotos/1.jpg" data-lightbox="gal"><img src=MainPhotos/1s.JPG></a>
-		  <a href="MainPhotos/2.jpg" data-lightbox="gal"><img src=MainPhotos/2s.JPG></a>
-		  <a href="MainPhotos/3.jpg" data-lightbox="gal"><img src=MainPhotos/3s.JPG></a>
-		  <a href="MainPhotos/4.jpg" data-lightbox="gal"><img src=MainPhotos/4s.JPG></a>
-		  <a href="MainPhotos/5.jpg" data-lightbox="gal"><img src=MainPhotos/5s.JPG></a>
-		  <a href="MainPhotos/6.jpg" data-lightbox="gal"><img src=MainPhotos/8s.JPG></a>
-		  <a href="MainPhotos/7.jpg" data-lightbox="gal"><img src=MainPhotos/7s.JPG></a>
-		  <a href="MainPhotos/8.jpg" data-lightbox="gal"><img src=MainPhotos/8s.JPG></a>
-		  <a href="MainPhotos/9.jpg" data-lightbox="gal"><img src=MainPhotos/9s.JPG></a>
-		  <a href="MainPhotos/10.jpg" data-lightbox="gal"><img src=MainPhotos/10s.JPG></a>
-		  <a href="MainPhotos/11.jpg" data-lightbox="gal"><img src=MainPhotos/11s.JPG></a>
-		  <a href="MainPhotos/12.jpg" data-lightbox="gal"><img src=MainPhotos/12s.JPG></a>
-		  <a href="MainPhotos/13.jpg" data-lightbox="gal"><img src=MainPhotos/13s.JPG></a>
+		  <a href="MainPhotos/1.JPG" data-lightbox="gal"><img src=MainPhotos/1s.jpg></a>
+		  <a href="MainPhotos/2.JPG" data-lightbox="gal"><img src=MainPhotos/2s.jpg></a>
+		  <a href="MainPhotos/3.JPG" data-lightbox="gal"><img src=MainPhotos/3s.jpg></a>
+		  <a href="MainPhotos/4.JPG" data-lightbox="gal"><img src=MainPhotos/4s.jpg></a>
+		  <a href="MainPhotos/5.JPG" data-lightbox="gal"><img src=MainPhotos/5s.jpg></a>
+		  <a href="MainPhotos/6.JPG" data-lightbox="gal"><img src=MainPhotos/8s.jpg></a>
+		  <a href="MainPhotos/7.JPG" data-lightbox="gal"><img src=MainPhotos/7s.jpg></a>
+		  <a href="MainPhotos/8.JPG" data-lightbox="gal"><img src=MainPhotos/8s.jpg></a>
+		  <a href="MainPhotos/9.JPG" data-lightbox="gal"><img src=MainPhotos/9s.jpg></a>
+		  <a href="MainPhotos/10.JPG" data-lightbox="gal"><img src=MainPhotos/10s.jpg></a>
+		  <a href="MainPhotos/11.JPG" data-lightbox="gal"><img src=MainPhotos/11s.jpg></a>
+		  <a href="MainPhotos/13.JPG" data-lightbox="gal"><img src=MainPhotos/13s.jpg></a>
+		  <a href="MainPhotos/12.JPG" data-lightbox="gal"><img src=MainPhotos/12s.jpg></a>
 		</div>
     <div class="gallery-pad">
     </div>
@@ -146,3 +156,4 @@ function carousel() {
 </script>
 </body>
 </html>
+	
