@@ -41,6 +41,40 @@ body{
 	min-width: 350px;
 }
 
+.mobile-nav{
+	display: none;
+	float: right;
+	position: relative;
+}
+
+.mobile-nav img{
+	width: 69px;
+	margin-top:4px;
+}
+
+.dropbtn{
+	width: 80.69px;
+}
+
+.dropdown{
+	display: none;
+	top: 80px;
+	float: left;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-nav a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.show {display:block;}
+
 .navbar ul{
 	float: right;
 	list-style: none;
@@ -52,6 +86,7 @@ body{
 	padding: 0 1.5rem;
 	padding-top: 10px;
 	padding-bottom: 8px;
+	width: 50px;
 }
 
 .navbar ul a{
@@ -194,11 +229,37 @@ p{
 	margin: 0 auto;
 }
 
+
+.slide-container{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.slides{
+	margin: 0 auto;
+}
+
 @media only screen and (max-width:1118px) {
   /* For tablets: */
   .gallery-container img{
 	 width:45%;
   }
+}
+@media only screen and (max-width:850px){
+	
+	.norm-nav{
+		display: none;
+	}
+	.mobile-nav{
+		display: inline-block;
+	}
+	.navbar ul{
+		float: left;
+	}
+	.navbar-container{
+		width:95%;
+	}
 }
 @media only screen and (max-width:650px) {
   /* For mobile phones: */
@@ -221,11 +282,20 @@ p{
 		border-radius: 0px;
 		padding-left: 0px;
 		padding-right: 0px;
+		width: 100%;
+		margin: 0;
 	}
 	.gallery-container img{
 		
 		padding-left: 0px;
 		padding-right: 0px;
 	}
+	.gallery-pad{
+		height: 0px;
+	}
+	.nav-text a{
+		font-size:27px;
+	}
+	
   }
 
