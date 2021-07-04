@@ -51,8 +51,8 @@ body {font-family: "Lato", sans-serif}
 				</ul>
 			</div>
 			<div class="mobile-nav">
-				<button onclick="myFunction()" class="dropbtn"><img src="images/menu.png"></button>
-				<ul>
+				<div onclick="myFunction()" class="dropbtn"><img src="images/menu.png"></div>
+				<ul class="dropdown" id="myDropdown">
 					<a href="#about"><li>About</li></a>
 					<a href="#gallery"><li>Gallery</li></a>
 					<a href="#prints"><li>Prints</li></a>
@@ -136,8 +136,27 @@ function carousel() {
   setTimeout(carousel, 4000);
 }
 
+</script>
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
 
-
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 
 </script>
 
@@ -147,7 +166,7 @@ function carousel() {
 
 <script>
     lightbox.option({
-      'disableScrolling': true;
+      'disableScrolling': true
       'wrapAround': true
     })
 </script>
@@ -156,4 +175,3 @@ function carousel() {
 </script>
 </body>
 </html>
-	
