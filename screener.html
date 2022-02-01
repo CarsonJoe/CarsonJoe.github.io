@@ -64,19 +64,16 @@
 			document.getElementById("first").innerHTML = d.toDateString().substring(4,11);
 			
 			var dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-			console.log(dayNames[d.getUTCDay()-1]);
-			console.log(d.getUTCDay());
+			console.log('Day: ' + dayNames[d.getUTCDay()-1] + ' - ' + d.getUTCDay());
 			
 			var monNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-			console.log(monNames[d.getUTCMonth()-1]);
-			console.log(d.getUTCMonth());
+			console.log('Month: ' + monNames[d.getUTCMonth()] + ' - ' + d.getUTCMonth());
 			
 			var dateNames = ['1st','2nd','3rd','4th','5th','6th','7th','8th','9th','10th','11th','12th','13th','14th','15th','16th','17th','18th','19th','20th','21st','22nd','23rd','24th','25th','26th','27th','28th','29th','30th','31st','32nd'];
-			console.log(dateNames[d.toDateString().substring(8,11)]);
-			console.log(d.toDateString().substring(8,11));
+			console.log('Date: ' + dateNames[d.toDateString().substring(8,11)-1] + " - " + d.toDateString().substring(8,11));
 			
 			day = dayNames[d.getUTCDay()-1];
-			month = monNames[d.getUTCMonth()-1];
+			month = monNames[d.getUTCMonth()];
 			date = dateNames[d.toDateString().substring(8,11)-1];
 			
 			document.getElementById("second").innerHTML = day + ", " + month + " " + date;
