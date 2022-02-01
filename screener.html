@@ -3,19 +3,23 @@
 		<title>Screener</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<style>
-			body {padding: 0; margin: 0; background-color: #202123;}
+			body {
+				padding: 0;
+				margin: 0; 
+				background-color: #202123;
+			}
 			
-			.entire-webpage {
-				zoom: .7;
+			.entire-webpage{
+				zoom: .6;
+				-o-transform-origin: 0 0;
 				-webkit-transform: scale(2);/* Safari Property */
+				-webkit-transform-origin: 0 0;
 				transform: scale(2); /* Standard Property */
 				transform-origin: 0 0;  /* Standard Property */
 			}
-			
+		
 			#bg {
-				background:
-					url(screener.png) bottom left no-repeat;
-					url(screener.png) bottom left no-repeat;
+				background: url(screener.png) bottom left no-repeat;
 				height: 1700px;
 			}
 			
@@ -37,49 +41,44 @@
 		</style>
 		
 	</head>
-	<body>
+	<body class="entire-webpage">
 		<div id="bg">
 		</div>
-			<div id="topWrap">
-					<p id="first"></p>
-					
-					<!--
-					<p><span id="datetime"></span></p><script>
-						var dt = new Date();
-						document.getElementById("datetime").innerHTML=dt.toLocaleString();
-					</script> 
-					-->
-					
-			</div>
-			<div id="botWrap">
-				<p id="second">Wednesday, January 26th</p>
-			</div>
-			<script>
-				let d = new Date();
-				console.log(d.toString());
-				
-				
-				console.log(d.toDateString().substring(4,11));
-				document.getElementById("first").innerHTML = d.toDateString().substring(4,11);
-				
-				var dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-				console.log(dayNames[d.getUTCDay()-1]);
-				console.log(d.getUTCDay());
-				
-				var monNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-				console.log(monNames[d.getUTCMonth()-1]);
-				console.log(d.getUTCMonth());
-				
-				var dateNames = ['1st','2nd','3rd','4th','5th','6th','7th','8th','9th','10th','11th','12th','13th','14th','15th','16th','17th','18th','19th','20th','21st','22nd','23rd','24th','25th','26th','27th','28th','29th','30th','31st','32nd'];
-				console.log(dateNames[d.toDateString().substring(8,11)]);
-				console.log(d.toDateString().substring(8,11));
-				
-				day = dayNames[d.getUTCDay()-1];
-				month = monNames[d.getUTCMonth()-1];
-				date = dateNames[d.toDateString().substring(8,11)-1];
-				
-				document.getElementById("second").innerHTML = day + ", " + month + " " + date;
-				
-			</script>
+		
+		<div id="topWrap">
+			<p id="first"></p>
+		</div>
+		
+		<div id="botWrap">
+			<p id="second"></p>
+		</div>
+		
+		<script>
+			let d = new Date();
+			console.log(d.toString());
+			
+			
+			console.log(d.toDateString().substring(4,11));
+			document.getElementById("first").innerHTML = d.toDateString().substring(4,11);
+			
+			var dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+			console.log(dayNames[d.getUTCDay()-1]);
+			console.log(d.getUTCDay());
+			
+			var monNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+			console.log(monNames[d.getUTCMonth()-1]);
+			console.log(d.getUTCMonth());
+			
+			var dateNames = ['1st','2nd','3rd','4th','5th','6th','7th','8th','9th','10th','11th','12th','13th','14th','15th','16th','17th','18th','19th','20th','21st','22nd','23rd','24th','25th','26th','27th','28th','29th','30th','31st','32nd'];
+			console.log(dateNames[d.toDateString().substring(8,11)]);
+			console.log(d.toDateString().substring(8,11));
+			
+			day = dayNames[d.getUTCDay()-1];
+			month = monNames[d.getUTCMonth()-1];
+			date = dateNames[d.toDateString().substring(8,11)-1];
+			
+			document.getElementById("second").innerHTML = day + ", " + month + " " + date;
+			
+		</script>
 	</body>
 </html>
