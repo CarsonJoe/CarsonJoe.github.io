@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower</title>
+
+    <style>
+        html body{
+            margin: 0;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <canvas id="canvas"></canvas>
+
+
+    <script>
+        
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+        
+        fillStyle = '#000';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        //ctx.globalCompositeOperation = 'destination-over';
+
+        let scale = 10;
+        //seed = 0.8969136341631951;
+        //seed = 0.44862517759749565;
+
+        let seed, hue, iGrad, iSize, number, angle, radius, x, y;
+        setValues();
+        animate();
+        drawFlower();
+
+        function setValues(){
+            number = 0;
+            seed = Math.random() * 10 + 2;
+            console.log(seed);
+            hue = seed * 360;
+            iGrad = seed / (seed * 1.5);
+            iSize = seed * 10;
+        }
+
+        function animate(){
+            if (number > 200){
+                
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = 'hsl(0, 100%, 0%)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                setValues();
+            }
+
+            drawFlower();
+            requestAnimationFrame(animate);
+        }
+            
+        function drawFlower(){
+            angle = number * seed;
+            radius = scale * Math.sqrt(number);
+            x = radius * Math.sin(angle) + canvas.width / 2;
+            y = radius * Math.cos(angle) + canvas.height / 2;
+
+            drawPetal();
+
+            number++;
+            hue += iGrad;
+        }
+
+        function drawPetal(){
+            ctx.fillStyle = 'hsl(' + hue + ', 70%, 70%)';
+            ctx.strokeStyle = ctx.fillStyle;
+            ctx.beginPath();
+            ctx.arc(x, y, number / iSize + 50, 0, Math.PI * 2);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+
+        }
+
+
+
+        
+
+    </script>
+</body>
+</html>
