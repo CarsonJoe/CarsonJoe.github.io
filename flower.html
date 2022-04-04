@@ -10,12 +10,27 @@
         html body{
             margin: 0;
         }
+        canvas {
+            background-color: black;
+        }
+    </style>
+</head>
     </style>
     
 </head>
 <body>
 
     <canvas id="canvas"></canvas>
+    <div class="sliders">
+        <input type="range" min="-6.0" max="6.0" step=".1" value="1.0" class="slider" id="iGradient">
+        <span id="iGrad"></span><br>
+        <input type="range" min="3" max="100" step=".01" value="20" class="slider" id="iSize">
+        <span id="iSiz"></span><br>
+        <input type="range" min="1" max="100" value="50" class="slider" id="dSize">
+        <span id="dSiz"></span><br>
+        <input type="range" min="1" max="5000" value="100" class="slider" id="iterations">
+        <span id="iter"></span><br>
+    </div>
 
 
     <script>
@@ -25,38 +40,65 @@
 
         canvas.height = window.innerHeight;
         canvas.width = window.innerWidth;
-        
-        fillStyle = '#000';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        //ctx.globalCompositeOperation = 'destination-over';
+        //cool: hue, saturation, color, source-over, destination-over;
+        ctx.globalCompositeOperation = 'source-over';
+
+                
+        let gradSlider = document.getElementById("iGradient");
+        let gradOutput = document.getElementById("iGrad");
+        gradOutput.innerHTML = gradSlider.value;
+
+        let iSizeSlider = document.getElementById("iSize");
+        let iSizeOutput = document.getElementById("iSiz");
+        iSizeOutput.innerHTML = iSizeSlider.value;
+
+        let dSizeSlider = document.getElementById("dSize");
+        let dSizeOutput = document.getElementById("dSiz");
+        dSizeOutput.innerHTML = dSizeSlider.value;
+
+        let iterSlider = document.getElementById("iterations");
+        let iterOutput = document.getElementById("iter");
+        iterOutput.innerHTML = iterSlider.value;
+
+        gradSlider.oninput = function() {
+            gradOutput.innerHTML = gradSlider.value;
+        }
+
+        iSizeSlider.oninput = function() {
+            iSizeOutput.innerHTML = iSizeSlider.value;
+        }
+
+        dSizeSlider.oninput = function() {
+            dSizeOutput.innerHTML = dSizeSlider.value;
+        }
+
+        iterSlider.oninput = function() {
+            iterOutput.innerHTML = iterSlider.value;
+        }
 
         let scale = 10;
-        //seed = 0.8969136341631951;
-        //seed = 0.44862517759749565;
 
         let seed, hue, iGrad, iSize, number, angle, radius, x, y;
         setValues();
-        animate();
-        drawFlower();
         
-        canvas.addEventListener('click', function() {setValues; animate(); drawFlower();}, false);
+        canvas.addEventListener('click', function() {setValues();}, false);
         
+
+
         function setValues(){
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
             number = 0;
             seed = Math.random() * 10 + 2;
             console.log(seed);
             hue = seed * 360;
-            iGrad = seed / (seed * 30);
-            iSize = seed * 10;
+            iGrad = parseFloat(gradOutput.innerHTML);
+            iSize = parseInt(iSizeOutput.innerHTML);
+            animate();
         }
 
         function animate(){
-            if (number > 100){
-                break;
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                ctx.fillStyle = 'hsl(0, 100%, 0%)';
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-                setValues();
+            if (number > parseInt(iterOutput.innerHTML)){
+                return;
             }
 
             drawFlower();
@@ -79,7 +121,7 @@
             ctx.fillStyle = 'hsl(' + hue + ', 70%, 70%)';
             ctx.strokeStyle = 'hsl(' + hue + ', 70%, 80%)';
             ctx.beginPath();
-            ctx.arc(x, y, number / iSize + 50, 0, Math.PI * 2);
+            ctx.arc(x, y, number / iSize + parseInt(dSizeOutput.innerHTML), 0, Math.PI * 2);
             ctx.closePath();
             ctx.fill();
             ctx.stroke();
