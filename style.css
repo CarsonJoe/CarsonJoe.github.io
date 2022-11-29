@@ -1,301 +1,299 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap')
-
-*{
-	margin:0;
-	padding:0;
-	box-sizing:border-box;
+* { 
+	box-sizing: border-box;
 }
 
-html{
-	font-size: 10px;
-	font-family: 'Roberto Condensed', halvetica, san-serif;
-	scroll-behavior: smooth;
+html, body {
+	min-height: 100%;
+	color: #000;
+}
+	/* sets the body height of the browser, so that backgrounds and div heights work correctly. Color and background will almost certainly be altered; they are just placeholders */
+	
+body {
+	font-family: helvetica, sans-serif;
+	font-family: baskerville, serif;
+	background-color: rgb(168 127 69 / 5%);
+	font-size: 1.4rem;
+	text-rendering: optimizeLegibility;
+}
+	/* sets the base font size for the document; turns on kerning pairs and ligatures */
+	
+body, ul, ol, dl {
+	margin: 0;
+}
+article, aside, audio, 
+footer, header, nav, section, video {
+	display: block; 
+	}
+	
+	/* ensures that older browsers will display HTML5 elements correctly */
+	
+h1 {
+	text-align: center;
+	color: rgba(30, 53, 84, 1);
+	margin: 10px;
+	font-size: 5rem;
 }
 
-body{
-	margin:0;
-	background-color: #FFF;
+.home h1 {
+	
+	font-size: 6rem;
+	color: rgba(169, 123, 60, 1);
+	text-shadow: 4px 4px 0 rgba(83, 60, 30, 1);
 }
 
-.header{
-	width: calc(100%-0px);
+h2 {
+	color: #5a9ffe;
+	text-align: left;
+	font-size: 2rem;
+	margin: 10px;
 }
 
-.navbar{
-	background: transparent url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/shiny2button_bg.png) center bottom repeat-x;
-	background-color: rgba(250,250,250,.8);
-	width: 100%;
-	height: 80px;
-	font-weight: 100;
-	line-height: 6rem;
-	font-family: Arial,Helvetica,sans-serif;
-	position: fixed;
-	top: 0;
-	margin: 0 auto;
-	z-index: 3;
-}
-
-.navbar-container{
-	width: 70%;
-	margin: 0 auto;
-	min-width: 350px;
-}
-
-.mobile-nav{
-	display: none;
-	float: right;
-	position: relative;
-}
-
-.mobile-nav img{
-	width: 69px;
-	margin-top:4px;
-}
-
-.dropbtn{
-	width: 80.69px;
-}
-
-.dropdown{
-	display: none;
-	top: 80px;
-	float: left;
-  background-color: #f1f1f1;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  margin: 0;
-  padding: 0;
-}
-
-.mobile-nav a {
-  color: black;
-  text-decoration: none;
-  display: block;
-}
-
-.show {display:block;}
-
-.navbar ul{
-	float: right;
-	list-style: none;
-	margin:0;
-}
-
-.navbar ul a li{
-	display: inline-block;
-	padding: 0 1.5rem;
-	padding-top: 10px;
-	padding-bottom: 8px;
-	width: 50px;
-}
-
-.navbar ul a{
-	text-decoration: none;
-	color: rgb(154,174,184);
-	font-size: 16px;
-	cursor: pointer;
-}
-
-.navbar ul li:hover{
-	background-color: rgba(10, 189, 240, 0.298039);
-	color: #fff;
-}
-
-.nav-text{
-	float: left;
-	margin-top: 10px;
-
-}
-
-.nav-text a{
-
-	color: rgb(81,94,101);
-	text-shadow:rgba(10, 189, 240, 0.298039) 3px 3px 0px, rgba(254, 1, 1, 0.298039) -3px -3px 0px;
-	font-size: 30px;
-	text-decoration: none;
-}
-
-.about{
-  padding-bottom: 200px;
-	background-color: #FFF;
-	text-align: Center;
-}
-
-h1{
-	padding-top: 70px;
-	padding-bottom: 70px;
-	font-size: 70px;
-	color: #FFF;
-	text-shadow:rgba(10, 189, 240, 0.298039) 3px 3px 0px, rgba(254, 1, 1, 0.298039) -3px -3px 0px;
-	min-width: 350px;
-}
-
-.who{
-	background-color: rgba(44,181,232,.53);
-	width:90%;
-  padding: 5%;
-  margin: 0 auto;
-  margin-bottom: 60px;
-  border-radius: 20px;
-	max-width: 500px;
-}
-
-.who h2{
-	margin-top:0;
-}
-
-.what{
-	background-color: rgba(44,181,232,.53);
-	width:90%;
-	max-width: 500px;
-	padding: 5%;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  border-radius: 20px;
-}
-
-.what h2{
-	margin-top:0;
-}
-
-.gallery{
-	background: linear-gradient(55deg, #d37aa8 0%, #81e8ff 51%, #5587e1 85%);
+.home h2 {
+	color: rgba(246, 242, 236, 1);
 	text-align: center;
 }
 
-.gallery h1{
-	margin:0;
+h3 {
+	font-size: 25px;
 }
 
-.gallery-container{
-	background-color: rgba(240,240,240,.3);
-	width:70%;
-	min-width: 350px;
-	margin: 0 auto;
-	padding:15px;
-  border-radius: 20px;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
 }
 
-.gallery-container img{
-  min-width: 200px;
-  max-width: 400px;
-	width:30.5%;
-  padding:10px;
-	transition: .7s;
+li {
+	display: inline;
+	color: rgba(158, 181, 212, 1);
 }
 
-.gallery-container img:hover{
-	transform: scale(1.03);
-	filter:hue-rotate(15deg);
-	filter:drop-shadow(0px 0px 10px gray);
+ul li a {
+	text-decoration: none;
+	color: rgba(12, 21, 34, 1);
+	color: rgba(169, 123, 60, 1);
+	font-size: 2rem;
+	padding: 10px;
+	font-weight: bold;
 }
 
-.gallery-pad{
-  height: 50px;
+ul li a:hover{
+	color: rgba(83, 60, 30, 1);
+}
+	/* begins to set up font sizes relative to base rem – h1 has been used as an example */
+	
+p { 
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	font-size: 2rem;
+	margin: 10px;
+} 
+	/* sets hyphenation by default on paragraphs */
+	
+textarea { 
+	resize: vertical;
+}
+ /* changes textarea resizing from "both" (UA default) to vertical only */
+ 
+table { border-collapse: collapse; }
+td {
+	padding: .5rem;
+}
+	/* causes tables to actually look like tables */
+	
+img { 
+	border: none;
+	max-width: 100%;
+}
+	/* removes outlines from linked images (for older browsers and IE), sets up images for responsive design layout */
+	
+input[type="submit"]::-moz-focus-inner, 
+	input[type="button"]::-moz-focus-inner {
+		border : 0px;
+	}
+	/* removes the inner border effect from focused buttons for form elements in Firefox */
+	
+input[type="search"] { 
+	-webkit-appearance: textfield;
+} 
+input[type="submit"] { 
+	-webkit-appearance:none;
+}
+	/* removes the OS X appearance from HTML5 search inputs and submit buttons when viewed in Safari */
+	
+input:required:after {
+	color: #f00;
+	content: " *";
+}
+	/* sets up required form fields with the conventional following red asterix */
+input[type="email"]:invalid { 
+	background: #f00;
+}
+	/* causes a visual alert in browsers that do client-side checking of HTML5 email field – this may already be the default in some browsers. */
+	
+.right { 
+	float: right;
+	margin-left: 2rem;
+	clear: right;
+}
+.left { 
+	float: left;
+	margin-right: 2rem;
+	clear: left;
+}
+	/* allows a quick shortcut for floating elements left and right while avoiding the “float quirk” problem */
+	
+sub, sup { 
+	line-height: 0;
+}
+    /* sets superscript and subscript text so that it doesn't throw off leading for elements in which they are included */
+	
+	
+.main {
+	padding: 0;
 }
 
-footer img{
-	margin-top: 5px;
-}
-
-.footer-container{
-  width: 350px;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-footer p{
-  color: rgb(154,174,184);
-  font-size: 14.2px;
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
-h2{
-	font-size: 40px;
-	color: rgb(81,94,101);
-}
-
-p{
-	font-size: 20px;
-	color: rgb(81,94,101);
-}
-
-.container{
-	width: 45%;
-	min-width:350px;
-	margin: 0 auto;
-}
-
-
-.slide-container{
-	height: 100%;
+.nav {
+	top: 0px;
+	z-index: 20;
+	position: sticky;
 	width: 100%;
-	overflow: hidden;
+
 }
 
-.slides{
-	margin: 0 auto;
+.home svg {
+	position: absolute;
+	bottom: -12px;
 }
 
-@media only screen and (max-width:1118px) {
-  /* For tablets: */
-  .gallery-container img{
-	 width:45%;
-  }
+.nav svg {
+	top: -10px;
+	position: relative;
 }
-@media only screen and (max-width:850px){
+
+.navbar {
+	color: rgba(169, 123, 60, 1);
+	padding: 10px;
+	text-align: center;
+	margin: auto;
+	/*background-color: rgba(169, 123, 60, 1);*/
+	background-color: rgba(30, 53, 84, 1);
 	
-	.norm-nav{
-		display: none;
-	}
-	.mobile-nav{
-		display: inline-block;
-	}
-	.navbar ul{
-		float: left;
-	}
-	.navbar-container{
-		width:95%;
+}
+
+.border {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: rgba(30, 53, 84, 1);
+	/*border-bottom: 10px solid rgba(169, 123, 60, 1);*/
+}
+
+.home {
+	position: relative;
+	height: 90vh;
+	top:0px;
+	background: linear-gradient(180deg, #0C1522 0%, #1E3554 79.68%);
+	border: 20px solid rgba(30, 53, 84, 1);
+	border-bottom: 10px solid rgb(169 123 60);
+	display: flex;
+	justify-content: center;
+}
+
+.title {
+	position: relative;
+	margin: auto;
+}
+
+svg {
+	display: block;
+	margin: auto;
+	z-index: 10;
+}
+
+.agave {
+	margin: auto;
+	position: relative;
+	max-width: 1000px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 100px;
+}
+
+.child1 {
+	width: 100%;
+	height: 800px;
+	background-color: 
+}
+
+.child1 img {
+	position: relative;
+	margin-top: 60px;
+	right: -50%;
+}
+
+.pad-right {
+	margin: 10px;
+	padding-left: 50%;
+}
+
+.pad-left {
+	margin: 10px;
+	padding-right: 50%;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.footer svg {
+	position: relative;
+	bottom: -207px;
+}
+
+.rectangle {
+	
+	background-color: rgb(168 127 69 / 14%);
+    position: absolute;
+    display: inline;
+    width: 100vw;
+    height: 505px;
+    right: 60%;
+    top: -11px;
+}
+
+.foot {
+	border: 20px solid #1E3554;
+	background: linear-gradient(0deg, #0C1522 0%, #1E3554 79.68%);
+	height: 500px;
+}
+
+
+.child2 {
+	max-width: 1000px;
+}
+
+@media screen and (max-width: 910px) {
+  .foot-tri{ display: none;}
+  p{font-size: 1.5rem;}
+  h1{font-size: 3rem;}
+}
+
+@media screen and (max-width: 500px) {
+  
+  .home h1{ font-size: 4rem;}
+  ul li a{font-size: 1.5rem;}
+}
+
+@media screen and (max-width: 1030px) {
+	.agave img{position: relative;
+    margin-top: 150px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 	}
 }
-@media only screen and (max-width:650px) {
-  /* For mobile phones: */
-    .gallery-container img{
-	 width:96%;
-  }
-	h1{
-		font-size:60px;
-	}
-	.what{
-		border-radius: 0px;
-	}
-	.who{
-		border-radius: 0px;
-	}
-	.container{
-		width:100%;
-	}
-	.gallery-container{
-		border-radius: 0px;
-		padding-left: 0px;
-		padding-right: 0px;
-		width: 100%;
-		margin: 0;
-	}
-	.gallery-container img{
-		
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-	.gallery-pad{
-		height: 0px;
-	}
-	.nav-text a{
-		font-size:27px;
-	}
-	
-  }
-
