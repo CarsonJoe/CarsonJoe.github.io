@@ -1,0 +1,299 @@
+* { 
+	box-sizing: border-box;
+}
+
+html, body {
+	min-height: 100%;
+	color: #000;
+}
+	/* sets the body height of the browser, so that backgrounds and div heights work correctly. Color and background will almost certainly be altered; they are just placeholders */
+	
+body {
+	font-family: helvetica, sans-serif;
+	font-family: baskerville, serif;
+	background-color: rgb(168 127 69 / 5%);
+	font-size: 1.4rem;
+	text-rendering: optimizeLegibility;
+}
+	/* sets the base font size for the document; turns on kerning pairs and ligatures */
+	
+body, ul, ol, dl {
+	margin: 0;
+}
+article, aside, audio, 
+footer, header, nav, section, video {
+	display: block; 
+	}
+	
+	/* ensures that older browsers will display HTML5 elements correctly */
+	
+h1 {
+	text-align: center;
+	color: rgba(30, 53, 84, 1);
+	margin: 10px;
+	font-size: 5rem;
+}
+
+.home h1 {
+	
+	font-size: 6rem;
+	color: rgba(169, 123, 60, 1);
+	text-shadow: 4px 4px 0 rgba(83, 60, 30, 1);
+}
+
+h2 {
+	color: #5a9ffe;
+	text-align: left;
+	font-size: 2rem;
+	margin: 10px;
+}
+
+.home h2 {
+	color: rgba(246, 242, 236, 1);
+	text-align: center;
+}
+
+h3 {
+	font-size: 25px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+li {
+	display: inline;
+	color: rgba(158, 181, 212, 1);
+}
+
+ul li a {
+	text-decoration: none;
+	color: rgba(12, 21, 34, 1);
+	color: rgba(169, 123, 60, 1);
+	font-size: 2rem;
+	padding: 10px;
+	font-weight: bold;
+}
+
+ul li a:hover{
+	color: rgba(83, 60, 30, 1);
+}
+	/* begins to set up font sizes relative to base rem – h1 has been used as an example */
+	
+p { 
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	font-size: 2rem;
+	margin: 10px;
+} 
+	/* sets hyphenation by default on paragraphs */
+	
+textarea { 
+	resize: vertical;
+}
+ /* changes textarea resizing from "both" (UA default) to vertical only */
+ 
+table { border-collapse: collapse; }
+td {
+	padding: .5rem;
+}
+	/* causes tables to actually look like tables */
+	
+img { 
+	border: none;
+	max-width: 100%;
+}
+	/* removes outlines from linked images (for older browsers and IE), sets up images for responsive design layout */
+	
+input[type="submit"]::-moz-focus-inner, 
+	input[type="button"]::-moz-focus-inner {
+		border : 0px;
+	}
+	/* removes the inner border effect from focused buttons for form elements in Firefox */
+	
+input[type="search"] { 
+	-webkit-appearance: textfield;
+} 
+input[type="submit"] { 
+	-webkit-appearance:none;
+}
+	/* removes the OS X appearance from HTML5 search inputs and submit buttons when viewed in Safari */
+	
+input:required:after {
+	color: #f00;
+	content: " *";
+}
+	/* sets up required form fields with the conventional following red asterix */
+input[type="email"]:invalid { 
+	background: #f00;
+}
+	/* causes a visual alert in browsers that do client-side checking of HTML5 email field – this may already be the default in some browsers. */
+	
+.right { 
+	float: right;
+	margin-left: 2rem;
+	clear: right;
+}
+.left { 
+	float: left;
+	margin-right: 2rem;
+	clear: left;
+}
+	/* allows a quick shortcut for floating elements left and right while avoiding the “float quirk” problem */
+	
+sub, sup { 
+	line-height: 0;
+}
+    /* sets superscript and subscript text so that it doesn't throw off leading for elements in which they are included */
+	
+	
+.main {
+	padding: 0;
+}
+
+.nav {
+	top: 0px;
+	z-index: 20;
+	position: sticky;
+	width: 100%;
+
+}
+
+.home svg {
+	position: absolute;
+	bottom: -12px;
+}
+
+.nav svg {
+	top: -10px;
+	position: relative;
+}
+
+.navbar {
+	color: rgba(169, 123, 60, 1);
+	padding: 10px;
+	text-align: center;
+	margin: auto;
+	/*background-color: rgba(169, 123, 60, 1);*/
+	background-color: rgba(30, 53, 84, 1);
+	
+}
+
+.border {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: rgba(30, 53, 84, 1);
+	/*border-bottom: 10px solid rgba(169, 123, 60, 1);*/
+}
+
+.home {
+	position: relative;
+	height: 90vh;
+	top:0px;
+	background: linear-gradient(180deg, #0C1522 0%, #1E3554 79.68%);
+	border: 20px solid rgba(30, 53, 84, 1);
+	border-bottom: 10px solid rgb(169 123 60);
+	display: flex;
+	justify-content: center;
+}
+
+.title {
+	position: relative;
+	margin: auto;
+}
+
+svg {
+	display: block;
+	margin: auto;
+	z-index: 10;
+}
+
+.agave {
+	margin: auto;
+	position: relative;
+	max-width: 1000px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 100px;
+}
+
+.child1 {
+	width: 100%;
+	height: 800px;
+	background-color: 
+}
+
+.child1 img {
+	position: relative;
+	margin-top: 60px;
+	right: -50%;
+}
+
+.pad-right {
+	margin: 10px;
+	padding-left: 50%;
+}
+
+.pad-left {
+	margin: 10px;
+	padding-right: 50%;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.footer svg {
+	position: relative;
+	bottom: -207px;
+}
+
+.rectangle {
+	
+	background-color: rgb(168 127 69 / 14%);
+    position: absolute;
+    display: inline;
+    width: 100vw;
+    height: 505px;
+    right: 60%;
+    top: -11px;
+}
+
+.foot {
+	border: 20px solid #1E3554;
+	background: linear-gradient(0deg, #0C1522 0%, #1E3554 79.68%);
+	height: 500px;
+}
+
+
+.child2 {
+	max-width: 1000px;
+}
+
+@media screen and (max-width: 910px) {
+  .foot-tri{ display: none;}
+  p{font-size: 1.5rem;}
+  h1{font-size: 3rem;}
+}
+
+@media screen and (max-width: 500px) {
+  
+  .home h1{ font-size: 4rem;}
+  ul li a{font-size: 1.5rem;}
+}
+
+@media screen and (max-width: 1030px) {
+	.agave img{position: relative;
+    margin-top: 150px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	}
+}
