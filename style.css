@@ -5,12 +5,11 @@
 html, body {
 	min-height: 100%;
 	color: #000;
+	scroll-behavior: smooth;
 }
 	/* sets the body height of the browser, so that backgrounds and div heights work correctly. Color and background will almost certainly be altered; they are just placeholders */
 	
 body {
-	font-family: helvetica, sans-serif;
-	font-family: baskerville, serif;
 	background-color: rgb(168 127 69 / 5%);
 	font-size: 1.4rem;
 	text-rendering: optimizeLegibility;
@@ -30,7 +29,6 @@ footer, header, nav, section, video {
 h1 {
 	text-align: center;
 	color: rgba(30, 53, 84, 1);
-	margin: 10px;
 	font-size: 5rem;
 }
 
@@ -54,7 +52,8 @@ h2 {
 }
 
 h3 {
-	font-size: 25px;
+	font-size: 1.7rem;
+	color: rgba(30, 53, 84, 1);
 }
 
 ul {
@@ -159,7 +158,7 @@ sub, sup {
 }
 
 .nav {
-	top: 0px;
+	top: -1px;
 	z-index: 20;
 	position: sticky;
 	width: 100%;
@@ -178,7 +177,7 @@ sub, sup {
 
 .navbar {
 	color: rgba(169, 123, 60, 1);
-	padding: 10px;
+	/*padding: 10px;*/
 	text-align: center;
 	margin: auto;
 	/*background-color: rgba(169, 123, 60, 1);*/
@@ -195,10 +194,10 @@ sub, sup {
 
 .home {
 	position: relative;
-	height: 90vh;
+	height: 93vh;
 	top:0px;
 	background: linear-gradient(180deg, #0C1522 0%, #1E3554 79.68%);
-	border: 20px solid rgba(30, 53, 84, 1);
+	border: 2vh solid rgba(30, 53, 84, 1);
 	border-bottom: 10px solid rgb(169 123 60);
 	display: flex;
 	justify-content: center;
@@ -227,14 +226,19 @@ svg {
 
 .child1 {
 	width: 100%;
-	height: 800px;
-	background-color: 
+	height: 1100px;
 }
 
 .child1 img {
 	position: relative;
-	margin-top: 60px;
 	right: -50%;
+	display: inline;
+}
+
+.about {
+	position: absolute;
+	top: 230px;
+	width: 40%;
 }
 
 .pad-right {
@@ -262,20 +266,54 @@ svg {
     position: absolute;
     display: inline;
     width: 100vw;
-    height: 505px;
-    right: 60%;
+    height: 800px;
+    right: 55%;
     top: -11px;
 }
 
 .foot {
-	border: 20px solid #1E3554;
 	background: linear-gradient(0deg, #0C1522 0%, #1E3554 79.68%);
 	height: 500px;
+	text-align: center;
+}
+
+.foot h1 {
+	margin: 80px;
+	color: #fff;
+}
+
+.foot a {
+	text-decoration: none;
+	color: rgba(169, 123, 60, 1);
+	font-size: 1rem;
+	padding: 10px;
+	font-weight: bold;
+}
+
+.foot h3 {
+	color: #fff;
+	margin-top: 0;
+}
+
+.foot a:hover{
+	color: rgba(83, 60, 30, 1);
 }
 
 
 .child2 {
 	max-width: 1000px;
+}
+
+.foot-wrap {
+	max-width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.partner {
+	width: 50%;
+	text-align: center;
+	display: inline;
 }
 
 @media screen and (max-width: 910px) {
@@ -294,6 +332,9 @@ svg {
 	.agave img{position: relative;
     margin-top: 150px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -75%);
 	}
+	.about{position: relative; width: 100%; top: -110px; padding:10px;}
+	.rectangle{height:600px;}
+	.child1{height:1200px;}
 }
